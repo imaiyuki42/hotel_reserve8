@@ -22,18 +22,16 @@
 @endif
 
 <!-- ログイン時のセッションの中身を表示 -->
-<div class="">
-    @if (session('login_error'))
-    {{ session('login_error') }}
-    @endif
-</div>
+<x-alert type="danger" :session="session('login_error')"/>
 
 <!-- ログアウト時のセッションの中身を表示 -->
-<div class="">
+<x-alert type="danger" :session="session('logout')"/>
+<!-- <div class="">
     @if (session('logout'))
     {{ session('logout') }}
     @endif
-</div>
+</div> -->
+
 
 <!-- ログインフォーム -->
 <form action="{{ route('login') }}" method="post">

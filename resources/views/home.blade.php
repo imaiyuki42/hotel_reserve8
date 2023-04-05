@@ -1,9 +1,7 @@
 <h1>トップ画面</h1>
 
 <div class="">
-    @if (session('login_success'))
-    {{ session('login_success') }}
-    @endif
+<x-alert type="success" :session="session('login_success')"/>
 </div>
 
 <p>名前：{{ Auth::user()->name }}</p>
