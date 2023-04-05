@@ -8,3 +8,8 @@
 
 <p>名前：{{ Auth::user()->name }}</p>
 <p>名前：{{ Auth::user()->email }}</p>
+
+<form action="{{ route('logout') }}" method="post">
+    @csrf
+    <button>ログアウト</button>
+</form>

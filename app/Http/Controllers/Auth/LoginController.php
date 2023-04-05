@@ -19,7 +19,6 @@ class LoginController extends Controller
      * メールアドレスとパスワードがある場合は認証する。
      * ない場合はlogin_errorをセッションに渡して返す。
      * */
-
     public function login(LoginFormRequest $request) {
 
         $credentials = $request->only(['email', 'password']);
@@ -27,11 +26,23 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect('home')->with('login_success', 'ログインに成功しました。');
+            return redirect()->route('home.index')->with('login_success', 'ログインに成功しました。');
         }
 
         return back()->withErrors([
             'login_error' => 'メールアドレスかパスワードが間違っています。'
         ]);
+    }
+
+    /** ログアウト機能　*/
+    public function logout(Request $request)
+    {
+        Auth::logout();
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect()->route('login.index')->with('logout', 'ログアウトしました。');
     }
 }

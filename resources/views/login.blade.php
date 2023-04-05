@@ -21,15 +21,22 @@
   </div>
 @endif
 
-<!-- セッションの中身を表示 -->
+<!-- ログイン時のセッションの中身を表示 -->
 <div class="">
     @if (session('login_error'))
     {{ session('login_error') }}
     @endif
 </div>
 
+<!-- ログアウト時のセッションの中身を表示 -->
+<div class="">
+    @if (session('logout'))
+    {{ session('logout') }}
+    @endif
+</div>
+
 <!-- ログインフォーム -->
-<form action="{{ route('login.login') }}" method="post">
+<form action="{{ route('login') }}" method="post">
     @csrf
     <label for="">メールアドレス</label>
     <input type="email" name="email">

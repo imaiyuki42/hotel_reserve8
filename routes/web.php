@@ -20,13 +20,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//ログイン前のみに使用することができる機能
 Route::group(['middleware' => ['guest']], function () {
+
     //ログイン
     Route::prefix('/login')->group(function() {
         //ログイン画面表示
         Route::get('', [LoginController::class, 'index'])->name('login.index');
         //ログイン機能
-        Route::post('', [LoginController::class, 'login'])->name('login.login');
+        Route::post('', [LoginController::class, 'login'])->name('login');
 
         //会員登録
         Route::prefix('/register')->group(function() {
@@ -38,8 +40,12 @@ Route::group(['middleware' => ['guest']], function () {
     });
 });
 
+//ログイン時のみに使用することができる機能
 Route::group(['middleware' => ['auth']], function () {
+
     //画面表示
     Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+    //ログアウト機能
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
