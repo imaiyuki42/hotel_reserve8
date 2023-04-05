@@ -8,8 +8,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script href="{{ asset('js/app.js') }}"></script>
 </head>
+
 <body>
-    <!-- バリデーションメッセージ -->
+<!-- バリデーションメッセージ -->
 @if ($errors->any())
   <div class="alert alert-danger">
     <ul>
@@ -19,6 +20,13 @@
     </ul>
   </div>
 @endif
+
+<!-- セッションの中身を表示 -->
+<div class="">
+    @if (session('login_error'))
+    {{ session('login_error') }}
+    @endif
+</div>
 
 <!-- ログインフォーム -->
 <form action="{{ route('login.login') }}" method="post">
