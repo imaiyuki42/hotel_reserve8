@@ -29,14 +29,14 @@ Route::group(['middleware' => ['guest']], function () {
         Route::get('', [LoginController::class, 'index'])->name('login.index');
         //ログイン機能
         Route::post('', [LoginController::class, 'login'])->name('login');
+    });
 
+    //会員登録
+    Route::prefix('/register')->group(function() {
+        //会員登録画面表示
+        Route::get('', [RegisterController::class, 'index'])->name('register.index');
         //会員登録
-        Route::prefix('/register')->group(function() {
-            //会員登録画面表示
-            Route::get('', [RegisterController::class, 'index'])->name('register.index');
-            //会員登録
-            Route::post('', [RegisterController::class, 'store'])->name('register.store');
-        });
+        Route::post('', [RegisterController::class, 'store'])->name('register.store');
     });
 });
 

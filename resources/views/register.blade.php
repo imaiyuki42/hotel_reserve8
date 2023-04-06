@@ -24,7 +24,7 @@
     <input type="password" name="password">
     <label for="">パスワード確認</label>
     <input type="password" name="password_confirmation">
-
+    
     <a href="{{ route('login.index') }}">戻る</a>
     <button type="submit">新規登録</button>
 </form>
