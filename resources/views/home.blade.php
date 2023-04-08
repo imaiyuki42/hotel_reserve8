@@ -1,13 +1,16 @@
+@extends('layouts.app')
+
+@section('content')
+
 <h1>トップ画面</h1>
 
-<div class="">
-<x-alert type="success" :session="session('login_success')"/>
-</div>
+<h2>{{ Auth::user()->name }}さんの予約状況</h2>
 
-<p>名前：{{ Auth::user()->name }}</p>
-<p>名前：{{ Auth::user()->email }}</p>
+
 
 <form action="{{ route('logout') }}" method="post">
     @csrf
     <button>ログアウト</button>
 </form>
+
+@endsection

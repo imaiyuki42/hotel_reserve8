@@ -11,7 +11,7 @@ class LoginController extends Controller
 {
     /**ログイン画面表示 */
     public function index() {
-        return view('login');
+        return view('auth.login');
     }
 
     /**
