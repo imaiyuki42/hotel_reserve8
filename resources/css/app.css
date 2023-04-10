@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.date-picker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  #date-input {
+    padding: 8px;
+    width: 200px;
+  }
+  
+  .fa-calendar {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+  

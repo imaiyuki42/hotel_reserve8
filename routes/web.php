@@ -30,7 +30,7 @@ Route::get('/', function () {
 Route::group(['middleware' => ['guest']], function () {
 
     //ログイン
-    Route::prefix('/login')->group(function() {
+    Route::prefix('/login')->group(function () {
         //ログイン画面表示
         Route::get('', [LoginController::class, 'index'])->name('login.index');
         //ログイン機能
@@ -38,7 +38,7 @@ Route::group(['middleware' => ['guest']], function () {
     });
 
     //会員登録
-    Route::prefix('/register')->group(function() {
+    Route::prefix('/register')->group(function () {
         //会員登録画面表示
         Route::get('', [RegisterController::class, 'index'])->name('register.index');
         //会員登録
@@ -49,16 +49,9 @@ Route::group(['middleware' => ['guest']], function () {
 //ログイン時のみに使用することができる機能
 Route::group(['middleware' => ['auth']], function () {
 
-    //ホーム画面表示
-    Route::get('/home', [HomeController::class, 'index'])->name('home.index');
-    //ログアウト機能
-    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
-
     /**header */
     //魅力画面表示
     Route::get('/feature', [FeatureController::class, 'index'])->name('feature.index');
-    //宿泊プラン画面表示
-    Route::get('/stay', [StayController::class, 'index'])->name('stay.index');
     //レストラン画面表示
     Route::get('/restaurant', [RestaurantController::class, 'index'])->name('restaurant.index');
     //宴会画面表示
@@ -67,5 +60,16 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/facility', [FacilityController::class, 'index'])->name('facility.index');
     //アクセス画面表示
     Route::get('/access', [AccessController::class, 'index'])->name('access.index');
-});
 
+    /**TOP画面 */
+    //TOP画面表示
+    Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+
+    //宿泊プラン画面表示
+    Route::get('/stay', [StayController::class, 'index'])->name('stay.index');
+    //宿泊予約検索
+    Route::post('/stay/result', [StayController::class, 'result'])->name('stay.result');
+
+    //ログアウト機能
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+});
