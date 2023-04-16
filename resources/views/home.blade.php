@@ -10,6 +10,7 @@
     <img class="carousel-img" src="{{ asset('images/top_2.jpg') }}" alt="スライダー2">
     <img class="carousel-img" src="{{ asset('images/top_3.jpg') }}" alt="スライダー3">
     <img class="carousel-img" src="{{ asset('images/top_4.jpg') }}" alt="スライダー4">
+    <img class="carousel-img" src="{{ asset('images/top_5.jpg') }}" alt="スライダー5">
 </div>
 
 <!-- 予約検索 -->
@@ -27,7 +28,7 @@
         </div>
 
         <h3>一部屋のご利用人数</h3>
-        <select name="use_count_adult" id="">
+        <select name="number_of_guests" id="">
             <option value="1">大人1名</option>
             <option value="2">大人2名</option>
             <option value="3">大人3名</option>
@@ -35,7 +36,7 @@
         </select>
 
         <h3>ご利用部屋数</h3>
-        <select name="use_room_count" id="">
+        <select name="room_use_number" id="">
             <option value="1">1部屋</option>
             <option value="2">2部屋</option>
             <option value="3">3部屋</option>

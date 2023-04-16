@@ -68,7 +68,7 @@ Route::group(['middleware' => ['auth']], function () {
     //宿泊プラン画面表示
     Route::get('/stay', [StayController::class, 'index'])->name('stay.index');
     //宿泊予約検索
-    Route::post('/stay/result', [StayController::class, 'result'])->name('stay.result');
+    Route::post('/stay/search', [StayController::class, 'search'])->name('stay.search');
 
     //ログアウト機能
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

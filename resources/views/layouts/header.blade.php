@@ -1,5 +1,5 @@
 <header>
-    <h1>ホテル予約サイト</h1>
+    <h1><a href="{{ route('home.index') }}">ホテル予約サイト</a></h1>
     <nav>
         <ul>
             <li><a href="{{ route('feature.index') }}">ホテルの魅力</a></li>
