@@ -43,6 +43,28 @@ ul,li,ol,a{
   opacity: 0.5;
 }
 
+/* footer */
+#footer-wrapper {
+  background-color: rgb(47,40,38);
+  padding: 40px 0;
+}
+
+.footer-nav-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-nav__list__a {
+  text-decoration: none;
+  color: #fff;
+}
+.footer-nav__list__a:hover {
+  color: #fff;
+  opacity: 0.5;
+}
+
 
 /* 検索TOPのCSS */
 
