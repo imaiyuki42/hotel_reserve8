@@ -13,6 +13,35 @@ ul,li,ol,a{
 }
 
 /* ヘッダー */
+#header-wrapper {
+  background-color: rgb(87,9,14);
+  padding: 40px 0;
+}
+.header-heading {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.header-heading__title {
+  display: inline-block;
+  color:#fff;
+}
+
+.header-nav-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.header-nav__list__a {
+  text-decoration: none;
+  color: #fff;
+}
+.header-nav__list__a:hover {
+  color: #fff;
+  opacity: 0.5;
+}
 
 
 /* 検索TOPのCSS */
