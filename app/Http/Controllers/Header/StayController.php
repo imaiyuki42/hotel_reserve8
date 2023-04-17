@@ -6,13 +6,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Room;
 use App\Models\Reservation;
+use App\Models\Plan;
 use Carbon\Carbon;
 
 class StayController extends Controller
 {
     public function index()
     {
-        return view('stay.stay');
+        $recommend_plans = Plan::where('recommended_flag', '=', '1')
+            ->get();
+
+        return view('stay.stay', compact('recommend_plans'));
     }
 
     /**宿泊の検索機能
