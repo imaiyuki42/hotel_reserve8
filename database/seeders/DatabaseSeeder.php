@@ -19,6 +19,9 @@ class DatabaseSeeder extends Seeder
             ReservationsSeeder::class,
             RoomsSeeder::class,
             PlansSeeder::class,
+            RestaurantReservationsSeeder::class,
+            RestaurantsSeeder::class,
+            FairsSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();
