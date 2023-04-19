@@ -14,7 +14,7 @@ ul,li,ol,a{
 
 /* ヘッダー */
 #header-wrapper {
-  background-color: rgb(87,9,14);
+  background-color: rgb(50,20,26);
   padding: 40px 0;
 }
 .header-heading {
@@ -65,27 +65,95 @@ ul,li,ol,a{
   opacity: 0.5;
 }
 
-
 /* 検索TOPのCSS */
+.top-search {
+  background-color: rgb(81, 61, 24);
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
 
+.carousel__img {
+  max-width: 960px;
+  max-height: 400px;
+}
+.top-search-checkin__title {
+  color: #fff;
+  margin-bottom: 15px;
+}
+#checkin_datepicker {
+  display: inline-block;
+  margin-left: 58px;
+  margin-bottom: 15px;
+}
+#top-search-checkout__container {
+  margin-left: 30px;
+}
+.top-search-checkout__title {
+  color: #fff;
+  margin-bottom: 15px;
+}
+#checkout_datepicker {
+  display: inline-block;
+  margin-left: 40px;
+  margin-bottom: 15px;
+}
+
+.top-search-user-count__container {
+  display: flex;
+}
+.top-search-user-count__title {
+  color: #fff;
+}
+.top-search-user-count__select {
+  display: inline-block;
+  width: 16%;
+  height: 25px;
+  margin-left: 32px;
+  margin-bottom: 15px;
+}
+.top-search-room-count__container {
+  display: flex;
+}
+.top-search-room-count__title {
+  color: #fff;
+}
+.top-search-room-count__select {
+  display: inline-block;
+  width: 16%;
+  height: 25px;
+  margin-left: 73px;
+  margin-bottom: 15px;
+}
+.top-search-search-button__container {
+  text-align: center;
+}
+.top-search-search-button {
+  display: inline-block;
+  background-color: rgb(145, 125, 82);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+
+}
 /* カレンダーcss */
 .date-picker {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  #date-input {
-    padding: 8px;
-    width: 200px;
-  }
-  
-  .fa-calendar {
-    position: absolute;
-    right: 10px;
-    cursor: pointer;
-  }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#date-input {
+  padding: 8px;
+  width: 200px;
+}
+
+.fa-calendar {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
 
 /* feature */
 #feature-wrapper {
