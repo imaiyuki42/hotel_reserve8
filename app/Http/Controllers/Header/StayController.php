@@ -13,10 +13,13 @@ class StayController extends Controller
 {
     public function index()
     {
+        //おすすめのプランの情報を取得する
         $recommend_plans = Plan::where('recommended_flag', '=', '1')
             ->get();
 
-        return view('stay.stay', compact('recommend_plans'));
+        $plans = Plan::all();
+
+        return view('stay.stay', compact('recommend_plans', 'plans'));
     }
 
     /**宿泊の検索機能

@@ -16,6 +16,7 @@ class CreatePlansTable extends Migration
         Schema::create('plans', function (Blueprint $table) {
             $table->id('plan_id');
             $table->string('plan_name');
+            $table->text('plan_catch_copy');
             $table->text('plan_description');
             $table->integer('plan_price');
             $table->string('plan_image');
