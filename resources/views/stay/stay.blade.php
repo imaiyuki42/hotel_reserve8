@@ -44,45 +44,9 @@
     </div>
 </div>
 
-<!-- 検索 -->
-<div class="stay-search">
-    <form action="{{ route('stay.search') }}" method="post">
-        @csrf
-        <div class="date-picker" id="stay-search-checkin__container">
-            <h3 class="stay-search-checkin__title">チェックイン日</h3>
-            <input type="text" id="checkin_datepicker" name="checkin_date">
-        </div>
+@component('components.hotel_reservation_search')
 
-        <div class="date-picker" id="stay-search-checkout__container">
-            <h3 class="stay-search-checkout__title">チェックアウト日</h3>
-            <input type="text" id="checkout_datepicker" name="checkout_date">
-        </div>
-
-        <div class="stay-search-reserve-info">
-            <div class="stay-search-user-count__container">
-                <h3 class="stay-search-user-count__title">1部屋のご利用人数</h3>
-                <select name="number_of_guests" class="stay-search-user-count__select">
-                    <option value="1">大人1名</option>
-                    <option value="2">大人2名</option>
-                    <option value="3">大人3名</option>
-                    <option value="4">大人4名</option>
-                </select>
-            </div>
-
-            <div class="stay-search-room-count__container">
-                <h3 class="stay-search-room-count__title">ご利用部屋数</h3>
-                <select name="room_use_number" class="stay-search-room-count__select">
-                    <option value="1">1部屋</option>
-                    <option value="2">2部屋</option>
-                    <option value="3">3部屋</option>
-                    <option value="4">4部屋</option>
-                </select>
-            </div>
-        </div>
-        <div class="stay-search-search-button__container">
-            <button class="stay-search-search-button" type="submit">検索する</button>
-        </div>
-</div>
+@endcomponent
 
 
 @endsection

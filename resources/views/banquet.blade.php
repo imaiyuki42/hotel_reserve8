@@ -35,4 +35,8 @@
 
 </table>
 
+@component('components.hotel_reservation_search')
+
+@endcomponent
+
 @endsection
