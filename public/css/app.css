@@ -338,3 +338,132 @@ ul,li,ol,a{
   font-size: 0.9rem;
 }
 
+/* restaurant recommended fair */
+
+.restaurant-recommended-fair__title-container {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.restaurant-recommended-fair__sub-title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 1.0rem;
+}
+.restaurant-recommended-fair__title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline 1px solid rgb(34, 32, 0);
+  text-decoration-skip-ink: none;
+  text-underline-offset: 10px;
+}
+.restaurant-recommended-fair__grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.restaurant-recommended-fair__img {
+  width: 400px;
+  height: 220px;
+  margin-bottom: 15px;
+}
+.restaurant-recommended-fair__name {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.restaurant-recommended-fair__description {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+.restaurant-recommended-fair__event_date {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* restaurant fair */
+
+.restaurant-fair__title-container {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.restaurant-fair__sub-title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 1.0rem;
+}
+.restaurant-fair__title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline 1px solid rgb(34, 32, 0);
+  text-decoration-skip-ink: none;
+  text-underline-offset: 10px;
+}
+.restaurant-fair__grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.restaurant-fair__img {
+  width: 400px;
+  height: 220px;
+  margin-bottom: 15px;
+}
+.restaurant-fair__name {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.restaurant-fair__description {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+.restaurant-fair__event_date {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.restaurant-fair__price {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+/* restaurant */
+.restaurant__title-container {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.restaurant__sub-title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 1.0rem;
+}
+.restaurant__title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline 1px solid rgb(34, 32, 0);
+  text-decoration-skip-ink: none;
+  text-underline-offset: 10px;
+}
+.restaurant__grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.restaurant__img {
+  width: 400px;
+  height: 220px;
+  margin-bottom: 15px;
+}
+.restaurant__name {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.restaurant__description {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+.restaurant__event_date {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.restaurant__price {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+

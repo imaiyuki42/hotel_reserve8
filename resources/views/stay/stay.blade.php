@@ -2,7 +2,7 @@
 
 @section('content')
 
-<!-- おすすめプラン -->
+<!-- stay -->
 <div class="stay-recommended-plan__wrapper">
 
     <!-- おすすめプラン-title -->
