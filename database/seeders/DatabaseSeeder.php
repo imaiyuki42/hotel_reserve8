@@ -22,6 +22,9 @@ class DatabaseSeeder extends Seeder
             RestaurantReservationsSeeder::class,
             RestaurantsSeeder::class,
             FairsSeeder::class,
+            BanquetUsersSeeder::class,
+            BanquetReservationsSeeder::class,
+            BanquetHallsSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();
