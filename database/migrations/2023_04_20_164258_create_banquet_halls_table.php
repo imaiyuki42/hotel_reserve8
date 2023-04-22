@@ -22,6 +22,8 @@ class CreateBanquetHallsTable extends Migration
             $table->integer('dinner_style_fit_count');
             $table->integer('buffet_style_fit_count');
             $table->integer('theater_style_fit_count');
+            $table->text('banquet_catch_copy');
+            $table->text('banquet_description');
             $table->string('banquet_image');
             $table->timestamps();
         });

@@ -148,12 +148,10 @@ ul,li,ol,a{
   justify-content: center;
   position: relative;
 }
-
 #date-input {
   padding: 8px;
   width: 200px;
 }
-
 .fa-calendar {
   position: absolute;
   right: 10px;
@@ -398,5 +396,60 @@ ul,li,ol,a{
 .restaurant__price {
   font-size: 1rem;
   margin-bottom: 15px;
+}
+
+/* banquet */
+.banquet__title-container {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.banquet__sub-title {
+  font-family: 'Pinyon Script', cursive;
+  font-size: 1.0rem;
+}
+.banquet__title {
+  font-size: 1.5rem;
+  text-align: center;
+  text-decoration: underline 1px solid rgb(34, 32, 0);
+  text-decoration-skip-ink: none;
+  text-underline-offset: 10px;
+}
+.banquet__grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.banquet__img {
+  width: 400px;
+  height: 220px;
+  margin-bottom: 15px;
+}
+.banquet__name {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+.banquet__catch-copy {
+  font-size: 0.9rem;
+}
+.banquet-use-count__title {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+.banquet-tr__th {
+  background-color: rgb(200, 198, 198);
+}
+.banquet-th {
+  text-align: center;
+  padding: 10px 20px;
+}
+.banquet-td {
+  padding: 10px;
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.banquet-table {
+margin-bottom: 40px;
 }
 

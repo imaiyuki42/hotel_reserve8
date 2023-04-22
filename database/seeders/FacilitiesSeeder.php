@@ -26,7 +26,7 @@ class FacilitiesSeeder extends Seeder
                 'facility_name' => 'トロピカルスパ',
                 'facility_catch_copy' => '心と体が満たされる、極上のスパ体験を。',
                 'facility_description' => '熱帯の雰囲気を感じさせるスパで、マッサージやハーブティメントメント、フェイシャルトリートメントなどを提供しています。',
-                'facility_image' => 'pool_1.jpg',
+                'facility_image' => 'spa_1.jpg',
                 'created_at' => Now(),
             ],
             [
