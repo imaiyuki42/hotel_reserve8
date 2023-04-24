@@ -65,10 +65,15 @@ Route::group(['middleware' => ['auth']], function () {
     //TOP画面表示
     Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 
-    //宿泊プラン画面表示
-    Route::get('/stay', [StayController::class, 'index'])->name('stay.index');
-    //宿泊予約検索
-    Route::post('/stay/search', [StayController::class, 'search'])->name('stay.search');
+    //宿泊プラン
+    Route::prefix('/stay')->group(function () {
+        //TOP画面表示
+        Route::get('', [StayController::class, 'index'])->name('stay.index');
+        //予約検索結果表示
+        Route::post('/search', [StayController::class, 'search'])->name('stay.search');
+        //宿泊プラン詳細画面表示
+        Route::get('/plan/{plan_id}', [StayController::class, 'show'])->name('stay.plan.show');
+    });
 
     //ログアウト機能
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');

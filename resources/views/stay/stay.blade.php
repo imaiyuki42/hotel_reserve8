@@ -15,7 +15,9 @@
     <div class="stay-recommended-plan__grid-container">
         @foreach ($recommend_plans as $recommend_plan)
         <div class="stay-recommended-plan__grid-item">
-            <img class="stay-recommended-plan__img" src="{{ asset('images/'.$recommend_plan->plan_image) }}" alt="プラン画像">
+            <a href="{{ route('stay.plan.show', $recommend_plan->plan_id) }}">
+                <img class="stay-recommended-plan__img" src="{{ asset('images/'.$recommend_plan->plan_image) }}" alt="プラン画像">
+            </a>
             <h3 class="stay-recommended-plan__name">{{ $recommend_plan->plan_name }}</h3>
             <p class="stay-recommended-plan__description">{{ $recommend_plan->plan_catch_copy }}</p>
         </div>
@@ -34,11 +36,11 @@
     <div class="stay-plan__grid-container">
         @foreach ($plans as $plan)
         <div class="stay-plan__grid-item">
-            <img class="stay-plan__img" src="{{ asset('images/'.$plan->plan_image) }}" alt="aaa">
+            <a href="{{ route('stay.plan.show', $plan->plan_id) }}">
+                <img class="stay-plan__img" src="{{ asset('images/'.$plan->plan_image) }}" alt="aaa">
+            </a>
             <h3 class="stay-plan__name">{{ $plan->plan_name }}</h3>
             <p class="stay-plan__description">{{ $plan->plan_catch_copy }}</p>
-            <button class="stay-plan__detail-button" type="submit">詳細を見る</button>
-            <button class="stay-plan__reserve-button" type="submit">予約をする</button>
         </div>
         @endforeach
     </div>

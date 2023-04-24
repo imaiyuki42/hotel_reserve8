@@ -138,7 +138,6 @@ ul,li,ol,a{
   color: #fff;
   padding: 12px 24px;
   border-radius: 5px;
-
 }
 
 /* カレンダーcss */
@@ -487,3 +486,40 @@ margin-bottom: 40px;
 .facility__catch-copy {
   font-size: 0.9rem;
 }
+
+/* plan-detail */
+.plan-detail__wrapper {
+  margin: 30px;
+}
+.plan-detail__header {
+  border-bottom: solid 2px #222;
+  margin-bottom: 30px;
+}
+.plan-detail__name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.plan-detail__img {
+  display: block;
+  margin:  0 auto 30px;
+  width: 100%;
+  height: 500px;
+}
+.plan-detail__description {
+  margin-bottom: 30px;
+}
+.plan-detail__item {
+  display: flex;
+}
+.plan-detail__reserve-button-container {
+  margin: 15px auto 0;
+}
+.reserve-button {
+  display: inline-block;
+  background-color: rgb(10, 10, 10);
+  color: #fff;
+  padding: 20px 200px;
+  border-radius: 5px;
+
+} 

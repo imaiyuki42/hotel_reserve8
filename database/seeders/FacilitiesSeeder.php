@@ -33,7 +33,7 @@ class FacilitiesSeeder extends Seeder
                 'facility_name' => 'フォトスタジオ',
                 'facility_catch_copy' => '思い出に残る一枚を、プロの技で。',
                 'facility_description' => 'ホテルフォトスタジオでは、美しいロケーションでの撮影をお楽しみいただけます。プロのカメラマンが、あなたの魅力を最大限に引き出すポージング指導を行います。ウェディングフォトや前撮り、ファミリー写真など、どんなテーマにも対応できます。',
-                'facility_image' => 'pool_1.jpg',
+                'facility_image' => 'photo_studio_1.jpg',
                 'created_at' => Now(),
             ],
             [
