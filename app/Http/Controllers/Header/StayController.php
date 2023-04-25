@@ -11,6 +11,7 @@ use Carbon\Carbon;
 
 class StayController extends Controller
 {
+    /**トップ画面を表示 */
     public function index()
     {
         //おすすめのプランの情報を取得する
@@ -21,13 +22,6 @@ class StayController extends Controller
         $plans = Plan::all();
 
         return view('stay.stay', compact('recommend_plans', 'plans'));
-    }
-
-    public function show($plan_id)
-    {
-        $hotel_plan = Plan::find($plan_id);
-
-        return view('stay.plan_detail', compact('hotel_plan'));
     }
 
     /**宿泊の検索機能
@@ -51,6 +45,48 @@ class StayController extends Controller
         $available_rooms = $available_rooms_info['available_rooms'];
 
         return view('stay.result', compact('available_rooms_count', 'available_rooms'));
+    }
+
+    /**各プランの詳細画面を表示 */
+    public function show($plan_id)
+    {
+        //該当プランのデータを取得する
+        $hotel_plan = Plan::find($plan_id);
+
+        return view('stay.plan_detail', compact('hotel_plan'));
+    }
+
+    /**プラン詳細ページからプランの検索画面を表示する */
+    public function planSearch($plan_id)
+    {
+        //該当プランのデータを取得する
+        $hotel_plan = Plan::find($plan_id);
+
+        //プラン開始日をY年m月d日形式に変換
+        $plan_start_date = Carbon::parse($hotel_plan->plan_start_date)->format('Y年m月d日');
+
+        //プラン終了日をY年m月d日形式に変換
+        $plan_end_date = Carbon::parse($hotel_plan->plan_end_date)->format('Y年m月d日');
+
+        //食事の種類を判定する
+        if ($hotel_plan->meal == 0) {
+            $plan_meal = 'なし（素泊まり）';
+        } elseif ($hotel_plan->meal == 1) {
+            $plan_meal = '朝食付き';
+        } elseif ($hotel_plan->meal == 2) {
+            $plan_meal = '夕食付き';
+        } else {
+            $plan_meal = '朝食・夕食付き';
+        }
+
+
+        return view('stay.plan_search', compact('hotel_plan', 'plan_start_date', 'plan_end_date', 'plan_meal'));
+    }
+
+    public function planResult()
+    {
+
+        return view('stay.plan_result');
     }
 
     /**検索条件にヒットしたデータを取得する */

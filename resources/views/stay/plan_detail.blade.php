@@ -4,6 +4,7 @@
 
 <!-- プラン詳細画面 -->
 <div class="plan-detail__wrapper">
+
     <!-- プラン詳細のヘッダー -->
     <div class="plan-detail__header">
         <h1 class="plan-detail__name">{{ $hotel_plan->plan_name }}</h1>
@@ -28,7 +29,6 @@
                 <p class="plan-detail__meal">【食事】夕食付き</p>
                 @else
                 <p class="plan-detail__meal">【食事】朝食・夕食付き</p>
-
                 @endif
 
                 <p class="plan-detail__checkin-time">【チェックイン時間】{{ $hotel_plan->checkin_time }}〜</p>
@@ -36,7 +36,7 @@
             </div>
 
             <div class="plan-detail__reserve-button-container">
-                <button class="reserve-button" type="submit">予約をする</button>
+                <a href="{{ route('stay.plan.search', $hotel_plan->plan_id) }}" class="reserve-button">予約をする</a>
             </div>
         </div>
     </div>

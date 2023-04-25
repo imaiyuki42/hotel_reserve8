@@ -73,6 +73,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('/search', [StayController::class, 'search'])->name('stay.search');
         //宿泊プラン詳細画面表示
         Route::get('/plan/{plan_id}', [StayController::class, 'show'])->name('stay.plan.show');
+        //宿泊プラン検索画面
+        Route::get('/plan/{plan_id}/search', [StayController::class, 'planSearch'])->name('stay.plan.search');
+        //宿泊プラン検索結果画面
+        Route::post('/plan/search/result', [StayController::class, 'planResult'])->name('stay.plan.result');
     });
 
     //ログアウト機能

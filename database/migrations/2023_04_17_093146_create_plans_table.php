@@ -22,6 +22,8 @@ class CreatePlansTable extends Migration
             $table->string('plan_image');
             $table->time('checkin_time');
             $table->time('checkout_time');
+            $table->date('plan_start_date');
+            $table->date('plan_end_date');
             $table->char('meal', 1);
             $table->char('recommended_flag', 1);
             $table->timestamps();
