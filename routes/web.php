@@ -4,11 +4,14 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Header\FeatureController;
-use App\Http\Controllers\Header\StayController;
 use App\Http\Controllers\Header\RestaurantController;
 use App\Http\Controllers\Header\BanquetController;
 use App\Http\Controllers\Header\FacilityController;
 use App\Http\Controllers\Header\AccessController;
+
+use App\Http\Controllers\Stay\StayController;
+use App\Http\Controllers\Stay\StayPlanController;
+use App\Http\Controllers\Stay\StayRoomController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -65,18 +68,27 @@ Route::group(['middleware' => ['auth']], function () {
     //TOP画面表示
     Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 
-    //宿泊プラン
+    /**宿泊プラン */
     Route::prefix('/stay')->group(function () {
         //TOP画面表示
         Route::get('', [StayController::class, 'index'])->name('stay.index');
         //予約検索結果表示
         Route::post('/search', [StayController::class, 'search'])->name('stay.search');
-        //宿泊プラン詳細画面表示
-        Route::get('/plan/{plan_id}', [StayController::class, 'show'])->name('stay.plan.show');
-        //宿泊プラン検索画面
-        Route::get('/plan/{plan_id}/search', [StayController::class, 'planSearch'])->name('stay.plan.search');
-        //宿泊プラン検索結果画面
-        Route::post('/plan/search/result', [StayController::class, 'planResult'])->name('stay.plan.result');
+
+        /**プラン関係 */
+        Route::prefix('/plan')->group(function () {
+            //宿泊プラン詳細画面表示
+            Route::get('/{plan_id}', [StayController::class, 'show'])->name('stay.plan.show');
+            //宿泊プラン検索画面
+            Route::get('/{plan_id}/search', [StayController::class, 'planSearch'])->name('stay.plan.search');
+            //宿泊プラン検索結果画面
+            Route::post('/search/result', [StayController::class, 'planResult'])->name('stay.plan.result');
+        });
+
+        /**客室関係 */
+
+        // 客室一覧
+        Route::get('/room', [StayController::class, 'room'])->name('stay.room.index');
     });
 
     //ログアウト機能

@@ -27,11 +27,13 @@
 
 <!-- プラン一覧 -->
 <div class="stay-plan__wrapper">
+
     <!-- プラン一覧-title -->
     <div class="stay-plan__title-container">
-        <span class="stay-plan__sub-title">Plan</span>
+        <span class="stay-plan__sub-title">Plan List</span>
         <h2 class="stay-plan__title">プラン一覧</h2>
     </div>
+
     <!-- プラン一覧-item -->
     <div class="stay-plan__grid-container">
         @foreach ($plans as $plan)
@@ -45,6 +47,24 @@
         @endforeach
     </div>
 </div>
+
+<!-- 客室一覧 -->
+<div class="stay-room__wrapper">
+
+    <!-- 客室一覧-title -->
+    <div class="stay-room__title-container">
+        <span class="stay-room__sub-title">Room</span>
+        <h2 class="stay-room__title">客室</h2>
+    </div>
+
+    <!-- 客室一覧-item -->
+    <div class="stay-room__container">
+        <img class="stay-room__img" src="{{ asset('images/room_1.jpg') }}" alt="客室メイン写真">
+        <a class="stay-room__button" href="{{ route('stay.room.index') }}">客室一覧を見る</a>
+    </div>
+
+</div>
+
 
 @component('components.hotel_reservation_search')
 

@@ -8,7 +8,7 @@
     <!-- main-title -->
     <h1 class="facility-title">施設案内</h1>
     <div class="facility-main__img-container">
-        <img class="facility-main__img" src="{{ asset('images/banquet_1.jpg') }}" alt="レストラントップ画像">
+        <img class="facility-main__img" src="{{ asset('images/spa_1.jpg') }}" alt="レストラントップ画像">
     </div>
 
     <div class="facility__title-container">

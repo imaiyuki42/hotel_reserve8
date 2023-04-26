@@ -40,7 +40,7 @@ class FacilitiesSeeder extends Seeder
                 'facility_name' => '駐車場',
                 'facility_catch_copy' => '駐車場も安心、快適。ホテルでの滞在をより一層楽しめる、心地よい駐車場をご用意しております。',
                 'facility_description' => 'ホテル駐車場は、24時間ご利用いただけます。屋内駐車場も完備しており、雨や雪の日でも快適に車をお預けいただけます。また、ホテルに宿泊されるお客様は、駐車場を1日1回無料でご利用いただけます。詳細はフロントにお問い合わせください。',
-                'facility_image' => 'pool_1.jpg',
+                'facility_image' => 'parking_1.jpg',
                 'created_at' => Now(),
             ],
         ]);

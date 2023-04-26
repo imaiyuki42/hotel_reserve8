@@ -20,8 +20,8 @@ class CreateRoomsTable extends Migration
             $table->integer('max_capacity');
             $table->string('bed_type');
             $table->boolean('smoking');
-            $table->integer('price');
-            $table->string('image');
+            $table->integer('room_price');
+            $table->string('room_image');
             $table->text('room_description');
             $table->timestamps();
         });

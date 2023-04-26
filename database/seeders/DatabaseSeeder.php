@@ -26,6 +26,9 @@ class DatabaseSeeder extends Seeder
             BanquetReservationsSeeder::class,
             BanquetHallsSeeder::class,
             FacilitiesSeeder::class,
+            EquipmentSeeder::class,
+            AmenitySeeder::class,
+            RoomTypeSeeder::class,
         ]);
 
         // \App\Models\User::factory(10)->create();
