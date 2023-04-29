@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Models\Room;
 use App\Models\Reservation;
 use App\Models\Plan;
+use App\Models\RoomType;
+use App\Models\Amenity;
+use App\Models\Equipment;
 use Carbon\Carbon;
 
 class StayController extends Controller
@@ -123,8 +126,27 @@ class StayController extends Controller
         return view('stay.plan_result');
     }
 
+    /**客室一覧画面表示 */
     public function room()
     {
-        return view('stay.room');
+        $rooms = Room::all();
+
+        return view('stay.room', compact('rooms'));
+    }
+
+    /**客室詳細画面表示 */
+    public function roomDetail($room_id)
+    {
+        $room_info = Room::find($room_id);
+
+        $equipments = Equipment::where('room_id', '=', $room_id)
+            ->select('equipment_name')
+            ->get();
+
+        $amenities = Amenity::where('room_id', '=', $room_id)
+            ->select('amenity_name')
+            ->get();
+
+        return view('stay.room_detail', compact('room_info', 'equipments', 'amenities'));
     }
 }

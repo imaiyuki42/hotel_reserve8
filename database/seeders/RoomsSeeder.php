@@ -16,7 +16,7 @@ class RoomsSeeder extends Seeder
     {
         DB::table('rooms')->insert([
             [
-                'room_number' => '101',
+                'room_name' => 'スタンダードルーム',
                 'bed_count' => '1',
                 'max_capacity' => '1',
                 'bed_type' => 'シングル',
@@ -27,7 +27,7 @@ class RoomsSeeder extends Seeder
                 'created_at' => Now(),
             ],
             [
-                'room_number' => '102',
+                'room_name' => 'デラックスルーム',
                 'bed_count' => '2',
                 'max_capacity' => '2',
                 'bed_type' => 'ツイン',
@@ -38,7 +38,7 @@ class RoomsSeeder extends Seeder
                 'created_at' => Now(),
             ],
             [
-                'room_number' => '103',
+                'room_name' => 'エグゼクティブルーム',
                 'bed_count' => '2',
                 'max_capacity' => '4',
                 'bed_type' => 'クアッド',
@@ -49,7 +49,7 @@ class RoomsSeeder extends Seeder
                 'created_at' => Now(),
             ],
             [
-                'room_number' => '201',
+                'room_name' => 'パノラマビュールーム',
                 'bed_count' => '2',
                 'max_capacity' => '4',
                 'bed_type' => 'クアッド',
@@ -60,7 +60,7 @@ class RoomsSeeder extends Seeder
                 'created_at' => Now(),
             ],
             [
-                'room_number' => '202',
+                'room_name' => 'ロイヤルスイートルーム',
                 'bed_count' => '2',
                 'max_capacity' => '3',
                 'bed_type' => 'トリプル',
@@ -71,7 +71,7 @@ class RoomsSeeder extends Seeder
                 'created_at' => Now(),
             ],
             [
-                'room_number' => '203',
+                'room_name' => 'プレジデンシャルスイートルーム',
                 'bed_count' => '1',
                 'max_capacity' => '2',
                 'bed_type' => 'ダブル',
@@ -82,7 +82,7 @@ class RoomsSeeder extends Seeder
                 'created_at' => Now(),
             ],
             [
-                'room_number' => '301',
+                'room_name' => 'プレミアム・ヴィラルーム',
                 'bed_count' => '2',
                 'max_capacity' => '2',
                 'bed_type' => 'ツイン',
@@ -93,7 +93,7 @@ class RoomsSeeder extends Seeder
                 'created_at' => Now(),
             ],
             [
-                'room_number' => '302',
+                'room_name' => 'プレジデンシャルルーム',
                 'bed_count' => '1',
                 'max_capacity' => '2',
                 'bed_type' => 'ダブル',
@@ -104,7 +104,7 @@ class RoomsSeeder extends Seeder
                 'created_at' => Now(),
             ],
             [
-                'room_number' => '303',
+                'room_name' => 'デラックスルーム',
                 'bed_count' => '1',
                 'max_capacity' => '1',
                 'bed_type' => 'シングル',

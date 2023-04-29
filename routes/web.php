@@ -86,9 +86,12 @@ Route::group(['middleware' => ['auth']], function () {
         });
 
         /**客室関係 */
-
-        // 客室一覧
-        Route::get('/room', [StayController::class, 'room'])->name('stay.room.index');
+        Route::prefix('/room')->group(function () {
+            // 客室一覧
+            Route::get('', [StayController::class, 'room'])->name('stay.room.index');
+            // 客室詳細画面
+            Route::get('/detail/{room_id}', [StayController::class, 'roomDetail'])->name('stay.room.detail');
+        });
     });
 
     //ログアウト機能
