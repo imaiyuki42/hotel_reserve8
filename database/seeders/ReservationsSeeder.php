@@ -18,6 +18,7 @@ class ReservationsSeeder extends Seeder
             [
                 'user_id' => '1',
                 'room_id' => '1',
+                'plan_id' => '1',
                 'checkin_date' => '2023-05-10',
                 'checkout_date' => '2023-05-11',
                 'number_of_guests' => '1',
@@ -28,6 +29,7 @@ class ReservationsSeeder extends Seeder
             [
                 'user_id' => '2',
                 'room_id' => '2',
+                'plan_id' => '2',
                 'checkin_date' => '2023-05-15',
                 'checkout_date' => '2023-05-17',
                 'number_of_guests' => '4',
@@ -38,6 +40,7 @@ class ReservationsSeeder extends Seeder
             [
                 'user_id' => '3',
                 'room_id' => '3',
+                'plan_id' => '3',
                 'checkin_date' => '2023-05-10',
                 'checkout_date' => '2023-05-12',
                 'number_of_guests' => '4',
@@ -48,6 +51,7 @@ class ReservationsSeeder extends Seeder
             [
                 'user_id' => '4',
                 'room_id' => '4',
+                'plan_id' => '4',
                 'checkin_date' => '2023-05-13',
                 'checkout_date' => '2023-05-17',
                 'number_of_guests' => '2',
@@ -58,6 +62,7 @@ class ReservationsSeeder extends Seeder
             [
                 'user_id' => '5',
                 'room_id' => '5',
+                'plan_id' => '5',
                 'checkin_date' => '2023-05-10',
                 'checkout_date' => '2023-05-21',
                 'number_of_guests' => '1',

@@ -22,4 +22,9 @@ class Plan extends Model
         'meal',
         'recommended_flag',
     ];
+
+    public function reservations()
+    {
+        return $this->belongsTo(Reservation::class);
+    }
 }

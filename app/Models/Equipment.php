@@ -15,4 +15,9 @@ class Equipment extends Model
         'room_id',
         'equipment_name',
     ];
+
+    public function rooms()
+    {
+        return $this->belongsTo(Room::class);
+    }
 }

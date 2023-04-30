@@ -17,6 +17,7 @@ class CreateReservationsTable extends Migration
             $table->id('reservation_id');
             $table->integer('user_id');
             $table->integer('room_id');
+            $table->integer('plan_id');
             $table->date('checkin_date');
             $table->date('checkout_date');
             $table->integer('number_of_guests');
